@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<style>
+
+</style>
+
+<body>
+
+
+    <div class="container">
+        <div class="input-container">
+            <div class="list-icon">
+                <div class="list-item">
+                    <div class="bullet"></div>
+                    <div class="line"></div>
+                </div>
+                <div class="list-item">
+                    <div class="bullet"></div>
+                    <div class="line"></div>
+                </div>
+                <div class="list-item">
+                    <div class="bullet"></div>
+                    <div class="line"></div>
+                </div>
+            </div>
+            <input type="text">
+            <button class="add-to-task">+</button>
+        </div>
+        <div class="task-container">
+            <div class="task-list-container">
+                <header class="task-list-header">
+                    <span>Task - List</span>
+
+                    <div class="task-info">
+                        <div class="count-info">
+                            <span> <span class="pending-tasks-total">0</span> Pending</span>
+                        </div>
+                        <div class="clear-tasks">
+                            <a href="" class="clear-pending-tasks">clear pending tasks</a>
+                        </div>
+
+                    </div>
+                </header>
+
+                <ul class="task-list">
+                </ul>
+            </div>
+            <div class="completed-tasks-cont">
+                <header class="compl-tasks-header">
+                    <span>Completed - Tasks</span>
+
+                    <div class="task-info">
+                        <div class="count-info">
+                            <span> <span class="compl-tasks-total">0</span> Completed</span>
+                        </div>
+                        <div class="clear-tasks">
+                            <a href="" class="clear-compl-tasks">clear completed tasks</a>
+                        </div>
+
+                    </div>
+
+                </header>
+                <ul class="completed-tasks-list">
+
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>

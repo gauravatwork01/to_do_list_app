@@ -1,0 +1,299 @@
+h1 {
+  background-color: aquamarine;
+}
+body {
+  background-color: #d4d6dd;
+}
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --icon-size-md: 20px;
+  --icon-size-lg: 30px;
+}
+
+/* utilities -------------------- */
+.no-cursor-pointer {
+  cursor: initial !important;
+}
+
+/* container  */
+
+div.container {
+  /* margin-top: 300px; */
+  min-width: 350px;
+  max-width: 450px;
+  /* height: 300px; */
+  height: auto;
+  margin: 100px auto;
+  /* background-color: #f0fcf9; */
+  /* background-color: aqua; */
+  background-color: #fcf9f4;
+  background-color: #edeade;
+  padding: 10px;
+  --border-radius: 10px;
+  border-radius: var(--border-radius);
+}
+
+/* input container  */
+
+div.input-container {
+  display: flex;
+  column-gap: 10px;
+  justify-content: flex-start;
+  align-items: center;
+  /* --bg-color: #ddd8dc; */
+  --bg-color: #ffffff;
+  background-color: var(--bg-color);
+  /* background-color: #eeeeee;
+  background-color: #ffffff; */
+  width: 100%;
+  padding: 15px;
+  border-radius: var(--border-radius);
+}
+/* div.input-container input[type="checkbox"] {
+  border: 2px solid red;
+} */
+
+div.input-container input {
+  flex-basis: 0;
+  flex-grow: 1;
+  padding: 8px 8px;
+  outline: none;
+  border: none;
+  border-radius: var(--border-radius);
+  /* cursor: pointer; */
+  /* background-color: var(--bg-color); */
+  background-color: var(--bg-color);
+  font-size: 20px;
+  min-width: 0;
+  /* max-width: 70%; */
+  /* display: flex;
+  column-gap: 10px;
+  justify-content: center; */
+}
+
+div.input-container div.list-icon {
+  flex-basis: auto;
+  /* flex-grow: 1; */
+  flex-grow: 0;
+  box-sizing: border-box;
+  --dimension: 30px;
+  height: var(--dimension);
+  width: var(--dimension);
+  border: 2px solid grey;
+  display: flex;
+  flex-direction: column;
+  row-gap: 2px;
+  padding-top: 3px;
+  border-bottom-right-radius: 10px;
+}
+
+div.input-container button {
+  flex-basis: auto;
+  /* flex-grow: 1; */
+  flex-grow: 0;
+  width: 25px;
+  height: 25px;
+  font-size: large;
+  border: 2px solid black;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+div.list-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 3px;
+}
+
+div.line {
+  border: 1px solid black;
+  width: 11px;
+  height: 3px;
+  background-color: black;
+  border-radius: 4px;
+  /* box-sizing: border-box; */
+}
+
+div.bullet {
+  border: 1px solid red;
+  border-radius: 50%;
+  width: 5px;
+  height: 5px;
+  background-color: red;
+}
+
+/* task container  */
+div.task-container ul {
+  list-style: none;
+  padding-inline-start: 0;
+
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+  /* column-gap: 10px; */
+}
+div.task-container ul li input[type="checkbox"] {
+  border: 2px solid red;
+}
+
+/* task-list-header ----------------------- */
+header.task-list-header {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.task-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.clear-tasks {
+  color: reda;
+}
+
+/* task-list-li ----------------------- */
+
+li.task-list-li {
+  transition: all 0.3s ease;
+}
+
+div.task-container li:hover {
+  /* border: 3px solid #d4d6dd;
+  border-radius: 5px; */
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+/* li-content ------------------------ */
+
+div.task-container div.li-content {
+  /* flex - properties  */
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+
+  padding: 5px;
+}
+
+/* label-container -------------------------- */
+div.label-container {
+  flex-basis: 0;
+  flex-grow: 1;
+}
+/* select-label ---------------------------- */
+label.select-label {
+  flex-basis: 0;
+  flex-grow: 1;
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+
+  position: relative;
+  /* justify-content: center; */
+}
+/* label-input ------------------------------- */
+input.label-input {
+  flex-basis: 0;
+  flex-grow: 0;
+
+  height: 0;
+  width: 0;
+  position: absolute;
+}
+input.label-input:checked + div.checkmark-cont > div.checkmark {
+  /* flex-basis: 0;
+  flex-grow: 0; */
+  visibility: visible;
+}
+/* checkmark-cont --------------------------------- */
+div.checkmark-cont {
+  flex-basis: auto;
+  flex-grow: 0;
+
+  display: inline-block;
+  --dimension: 25px;
+  --bg-color: #2196f3;
+  --bg-color: #aaaaaa;
+  height: var(--dimension);
+  width: var(--dimension);
+  background-color: var(--bg-color);
+  /* margin: auto; */
+  position: relative;
+}
+/* checkmark --------------------------------------- */
+div.checkmark {
+  --height: calc(var(--dimension) / 1.5);
+  height: var(--height);
+  width: calc(var(--height) / 2);
+  background-color: var(--bg-color);
+  border-style: solid;
+  border-color: white;
+  border-width: 0 3px 3px 0;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -70%) rotate(40deg);
+  transition: transform 0.4s ease;
+  /* visibility: hidden; */
+}
+div.line-mark {
+  /* --height: calc(var(--dimension) / 1.5);
+  height: var(--height); */
+  width: 70%;
+  /* height: 10%; */
+  background-color: white;
+  border-style: solid;
+  border-color: white;
+  border-width: 1.5px 3px 1.5px 3px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -70%);
+  /* visibility: hidden; */
+}
+/* label-text --------------------------------------- */
+span.label-text {
+  flex-grow: 1;
+  flex-basis: 0;
+}
+
+/* remove-icon ------------------------------------ */
+button.remove-icon {
+  flex-basis: auto;
+  flex-grow: 0;
+
+  display: inline-block;
+  height: var(--icon-size-md);
+  width: var(--icon-size-md);
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 50%;
+  font-family: sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  /* text-align: center; */
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+}
+
+/* completed-tasks-cont ---------------------------------- */
+header.compl-tasks-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  font-weight: 600;
+}
