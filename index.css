@@ -159,9 +159,9 @@ header.task-list-header {
   color: reda;
 }
 
-/* task-list-li ----------------------- */
+/* task-list-item ----------------------- */
 
-li.task-list-li {
+li.task-list-item {
   transition: all 0.3s ease;
 }
 
